@@ -12,7 +12,12 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`, 
 });
 
+const adapter = require("gatsby-adapter-netlify").default;
+
 module.exports = {
+  adapter: adapter({
+    excludeDatastoreFromEngineFunction: false
+  }),
   siteMetadata: {
     title: "Gatsby microCMS Site",
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
@@ -41,16 +46,6 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    {
-      resolve: `gatsby-plugin-sharp`,
-      options: {
-        defaults: {
-          formats: [`auto`, `webp`], // avif を除外
-          placeholder: `dominantColor`,
-          quality: 90,
-        },
-      },
-    },
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
