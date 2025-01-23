@@ -46,7 +46,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    resolve: `gatsby-plugin-sharp`,
+    `gatsby-plugin-sharp`,
     options: {
       defaults: {
         formats: [`auto`, `webp`],
