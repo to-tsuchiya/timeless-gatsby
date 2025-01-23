@@ -18,6 +18,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "gatsby-plugin-netlify": "^5.1.1",
     "prettier": "^2.8.8"
   },
   "keywords": [

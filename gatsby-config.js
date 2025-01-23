@@ -25,6 +25,7 @@ module.exports = {
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
+    `gatsby-plugin-netlify`,
     {
       resolve: "gatsby-source-microcms",
       options: {
@@ -45,7 +46,14 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
+    resolve: `gatsby-plugin-sharp`,
+    options: {
+      defaults: {
+        formats: [`auto`, `webp`],
+        placeholder: `blurred`,
+        quality: 50,
+      },
+    },
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
