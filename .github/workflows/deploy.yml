@@ -8,6 +8,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      MICROCMS_API_KEY: ${{ secrets.MICROCMS_API_KEY }}
+      MICROCMS_SERVICE_ID: ${{ secrets.MICROCMS_SERVICE_ID }}
 
     steps:
       # 1. コードをチェックアウト

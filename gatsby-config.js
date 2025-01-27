@@ -25,7 +25,6 @@ module.exports = {
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
-    `gatsby-plugin-netlify`,
     {
       resolve: "gatsby-source-microcms",
       options: {
